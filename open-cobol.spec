@@ -4,7 +4,7 @@ Summary:	COBOL compiler
 Summary(pl):	Kompilator jêzyka COBOL
 Name:		open-cobol
 Version:	0.32
-Release:	0.1
+Release:	0.2
 License:	GPL/LGPL
 Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -44,8 +44,9 @@ License.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
-%{__make}
+%configure \
+        CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -59,3 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
+%attr(755,root,root) %{_bindir}/*
+%{_datadir}/%{name}/config/*.conf
+%{_includedir}/libcob.h
+%{_includedir}/libcob/*
+%attr(755,root,root) %{_libdir}/libcob.*.*.*
+%{_libdir}/libcob.la
