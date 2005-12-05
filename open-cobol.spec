@@ -1,5 +1,7 @@
 #
-# TODO: Package and verify info file(s)
+# TODO:
+# - Package and verify info file(s)
+# - check and add BRs
 #
 Summary:	COBOL compiler
 Summary(pl):	Kompilator jêzyka COBOL
@@ -10,7 +12,7 @@ License:	GPL/LGPL
 Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	9ffc3b75eca988e40206b3e310bba635
-URL:		http://www.opencobol.org
+URL:		http://www.opencobol.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
