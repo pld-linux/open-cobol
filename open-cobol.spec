@@ -1,8 +1,11 @@
+#
+# TODO: Package and verify info file(s)
+#
 Summary:	COBOL compiler
 Summary(pl):	Kompilator jêzyka COBOL
 Name:		open-cobol
 Version:	0.32
-Release:	0.2
+Release:	0.9
 License:	GPL/LGPL
 Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
