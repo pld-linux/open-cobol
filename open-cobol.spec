@@ -6,9 +6,7 @@ Name:		open-cobol
 Version:	0.32
 Release:	0.1
 License:	GPL/LGPL
-Group:		Applications/Compilers
-######		Unknown group!
-######		Unknown group!
+Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	9ffc3b75eca988e40206b3e310bba635
 URL:		http://www.opencobol.org
@@ -48,7 +46,6 @@ License.
 %{__automake}
 %configure
 %{__make}
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
