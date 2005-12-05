@@ -1,5 +1,3 @@
-#
-# Conditional build:
 Summary:	COBOL compiler
 Summary(pl):	Kompilator jêzyka COBOL
 Name:		open-cobol
@@ -45,8 +43,8 @@ License.
 %{__autoheader}
 %{__automake}
 %configure \
-        CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
-%{__make} 
+	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -54,15 +52,17 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -n %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}/config/*.conf
 %{_includedir}/libcob.h
-%{_includedir}/libcob/*
+%{_includedir}/libcob
 %attr(755,root,root) %{_libdir}/libcob.*.*.*
 %{_libdir}/libcob.la
