@@ -68,9 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/*
-%dir %{_datadir}/%{name}
-%dir %{_datadir}/%{name}/config
-%{_datadir}/%{name}/config/*.conf
+%{_datadir}/%{name}
 %{_includedir}/libcob.h
 %{_includedir}/libcob
 %attr(755,root,root) %{_libdir}/libcob.*.*.*
