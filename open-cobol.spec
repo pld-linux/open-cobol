@@ -2,7 +2,7 @@ Summary:	COBOL compiler
 Summary(pl):	Kompilator jêzyka COBOL
 Name:		open-cobol
 Version:	0.32
-Release:	0.9
+Release:	1
 License:	GPL/LGPL
 Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/open-cobol/%{name}-%{version}.tar.gz
