@@ -1,8 +1,3 @@
-#
-# TODO:
-# - Package and verify info file(s)
-# - check and add BRs
-#
 Summary:	COBOL compiler
 Summary(pl):	Kompilator jêzyka COBOL
 Name:		open-cobol
@@ -15,7 +10,9 @@ Source0:	http://dl.sourceforge.net/open-cobol/%{name}-%{version}.tar.gz
 URL:		http://www.opencobol.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gcc-g77
 BuildRequires:	gettext-devel
+BuildRequires:	gmp-devel
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
