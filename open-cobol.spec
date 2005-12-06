@@ -10,12 +10,14 @@ Version:	0.32
 Release:	0.9
 License:	GPL/LGPL
 Group:		Development/Languages
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/open-cobol/%{name}-%{version}.tar.gz
 # Source0-md5:	9ffc3b75eca988e40206b3e310bba635
 URL:		http://www.opencobol.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libtool
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -72,3 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libcob.*.*.*
 %{_libdir}/libcob.la
 %{_libdir}/libcob.a
+%{_infodir}/*.info*
