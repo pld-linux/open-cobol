@@ -13,8 +13,13 @@ BuildRequires:	automake
 BuildRequires:	gcc-g77
 BuildRequires:	gettext-devel
 BuildRequires:	gmp-devel
+BuildRequires:	libltdl-devel
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
+Requires:	%{name}-libs = %{version}-%{release}
+Requires:	gmp-devel
+Requires:	libltdl-devel
+Requires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,10 +43,38 @@ Windows. Kompiler jest objêty licencj± GNU General Public License.
 Biblioteka uruchomieniowa jest objêta licencj± GNU Lesser General
 Public License.
 
+%package libs
+Summary:	OpenCOBOL runtime library
+Summary(pl):	Biblioteka uruchomieniowa OpenCOBOLa
+License:	LGPL
+Group:		Libraries
+
+%description libs
+OpenCOBOL runtime library.
+
+%description libs -l pl
+Biblioteka uruchomieniowa OpenCOBOLa.
+
+%package static
+Summary:	Static OpenCOBOL runtime library
+Summary(pl):	Statyczna biblioteka uruchomieniowa OpenCOBOLa
+License:	LGPL
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description static
+Static OpenCOBOL runtime library, needed to build statically
+linked COBOL programs.
+
+%description static -l pl
+Statyczna biblioteka uruchomieniowa OpenCOBOLa, potrzebna do tworzenia
+statycznie linkowanych programów w COBOLu.
+
 %prep
 %setup -q
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
@@ -61,6 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	libs -p /sbin/ldconfig
+%postun	libs -p /sbin/ldconfig
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
@@ -68,7 +104,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_includedir}/libcob.h
 %{_includedir}/libcob
-%attr(755,root,root) %{_libdir}/libcob.*.*.*
+%attr(755,root,root) %{_libdir}/libcob.so
 %{_libdir}/libcob.la
-%{_libdir}/libcob.a
 %{_infodir}/*.info*
+
+%files libs
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libcob.so.*.*.*
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/libcob.a
