@@ -32,11 +32,11 @@ OpenCOBOL jest kompilerem COBOLa o otwartych ¼ród³ach. OpenCOBOL
 implementuje znaczn± czê¶æ standardów COBOL 85 i COBOL 2002, jak i
 wiele z rozszerzeñ z istniej±cych kompilatorów COBOLa. OpenCOBOL
 t³umaczy ¼ród³a COBOLa do jêzyka C i nastêpnie kompiluje
-przet³umaczony kod u¿ywaj±c GCC. Mo¿esz budowaæ twoje programy
-COBOLowe na wielu platwormach, tj. GNU/Linux, Mac OS X i Microsoft
+przet³umaczony kod u¿ywaj±c GCC. Pozwala budowaæ programy COBOLowe na
+wielu platwormach, w tym takich jak GNU/Linux, Mac OS X i Microsoft
 Windows. Kompiler jest objêty licencj± GNU General Public License.
-Biblioteka "run-time" jest objêta licencj± GNU Lesser General Public
-License.
+Biblioteka uruchomieniowa jest objêta licencj± GNU Lesser General
+Public License.
 
 %prep
 %setup -q
