@@ -1,5 +1,5 @@
 Summary:	COBOL compiler
-Summary(pl):	Kompilator jêzyka COBOL
+Summary(pl.UTF-8):   Kompilator jÄ™zyka COBOL
 Name:		open-cobol
 Version:	0.32
 Release:	1
@@ -32,32 +32,32 @@ X, and Microsoft Windows. The compiler is licensed under GNU General
 Public License. The run-time library is licensed under GNU Lesser
 General Public License.
 
-%description -l pl
-OpenCOBOL jest kompilerem COBOLa o otwartych ¼ród³ach. OpenCOBOL
-implementuje znaczn± czê¶æ standardów COBOL 85 i COBOL 2002, jak i
-wiele z rozszerzeñ z istniej±cych kompilatorów COBOLa. OpenCOBOL
-t³umaczy ¼ród³a COBOLa do jêzyka C i nastêpnie kompiluje
-przet³umaczony kod u¿ywaj±c GCC. Pozwala budowaæ programy COBOLowe na
+%description -l pl.UTF-8
+OpenCOBOL jest kompilerem COBOLa o otwartych ÅºrÃ³dÅ‚ach. OpenCOBOL
+implementuje znacznÄ… czÄ™Å›Ä‡ standardÃ³w COBOL 85 i COBOL 2002, jak i
+wiele z rozszerzeÅ„ z istniejÄ…cych kompilatorÃ³w COBOLa. OpenCOBOL
+tÅ‚umaczy ÅºrÃ³dÅ‚a COBOLa do jÄ™zyka C i nastÄ™pnie kompiluje
+przetÅ‚umaczony kod uÅ¼ywajÄ…c GCC. Pozwala budowaÄ‡ programy COBOLowe na
 wielu platformach, w tym takich jak GNU/Linux, Mac OS X i Microsoft
-Windows. Kompilator jest objêty licencj± GNU General Public License.
-Biblioteka uruchomieniowa jest objêta licencj± GNU Lesser General
+Windows. Kompilator jest objÄ™ty licencjÄ… GNU General Public License.
+Biblioteka uruchomieniowa jest objÄ™ta licencjÄ… GNU Lesser General
 Public License.
 
 %package libs
 Summary:	OpenCOBOL runtime library
-Summary(pl):	Biblioteka uruchomieniowa OpenCOBOLa
+Summary(pl.UTF-8):   Biblioteka uruchomieniowa OpenCOBOLa
 License:	LGPL
 Group:		Libraries
 
 %description libs
 OpenCOBOL runtime library.
 
-%description libs -l pl
+%description libs -l pl.UTF-8
 Biblioteka uruchomieniowa OpenCOBOLa.
 
 %package static
 Summary:	Static OpenCOBOL runtime library
-Summary(pl):	Statyczna biblioteka uruchomieniowa OpenCOBOLa
+Summary(pl.UTF-8):   Statyczna biblioteka uruchomieniowa OpenCOBOLa
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
@@ -66,9 +66,9 @@ Requires:	%{name} = %{version}-%{release}
 Static OpenCOBOL runtime library, needed to build statically
 linked COBOL programs.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka uruchomieniowa OpenCOBOLa, potrzebna do tworzenia
-statycznie linkowanych programów w COBOLu.
+statycznie linkowanych programÃ³w w COBOLu.
 
 %prep
 %setup -q
