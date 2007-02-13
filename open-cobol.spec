@@ -1,5 +1,5 @@
 Summary:	COBOL compiler
-Summary(pl.UTF-8):   Kompilator języka COBOL
+Summary(pl.UTF-8):	Kompilator języka COBOL
 Name:		open-cobol
 Version:	0.32
 Release:	1
@@ -45,7 +45,7 @@ Public License.
 
 %package libs
 Summary:	OpenCOBOL runtime library
-Summary(pl.UTF-8):   Biblioteka uruchomieniowa OpenCOBOLa
+Summary(pl.UTF-8):	Biblioteka uruchomieniowa OpenCOBOLa
 License:	LGPL
 Group:		Libraries
 
@@ -57,7 +57,7 @@ Biblioteka uruchomieniowa OpenCOBOLa.
 
 %package static
 Summary:	Static OpenCOBOL runtime library
-Summary(pl.UTF-8):   Statyczna biblioteka uruchomieniowa OpenCOBOLa
+Summary(pl.UTF-8):	Statyczna biblioteka uruchomieniowa OpenCOBOLa
 License:	LGPL
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
