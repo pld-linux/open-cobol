@@ -1,12 +1,12 @@
 Summary:	COBOL compiler
 Summary(pl.UTF-8):	Kompilator języka COBOL
 Name:		open-cobol
-Version:	0.32
+Version:	1.0
 Release:	1
 License:	GPL/LGPL
 Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/open-cobol/%{name}-%{version}.tar.gz
-# Source0-md5:	9ffc3b75eca988e40206b3e310bba635
+# Source0-md5:	947e0d9c4ee7fa8f077ea4bca2f894e5
 URL:		http://www.opencobol.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -75,7 +75,7 @@ statycznie linkowanych programów w COBOLu.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
