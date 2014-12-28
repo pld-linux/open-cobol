@@ -11,7 +11,7 @@ URL:		http://www.opencobol.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-g77
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gmp-devel
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool
